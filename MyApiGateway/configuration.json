@@ -1,0 +1,56 @@
+﻿{
+    "ReRoutes": [
+        // API:IdentityService
+        {
+            "DownstreamPathTemplate": "/api/{url}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost", //"192.168.2.231",
+                    "Port": "6000"
+                }
+            ],
+            "UpstreamPathTemplate": "/IdentityService/{url}",
+            "UpstreamHttpMethod": [ "Get", "Post" ]
+        },
+        // API:ClientService
+        {
+            "DownstreamPathTemplate": "/api/{url}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost", //"192.168.2.231",
+                    "Port": "8810"
+                }
+            ],
+            "UpstreamPathTemplate": "/ClientService/{url}",
+            "UpstreamHttpMethod": [ "Get", "Post" ]
+        },
+        // API:ProductService
+        {
+            "DownstreamPathTemplate": "/api/{url}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost", //"192.168.2.231",
+                    "Port": "8820"
+                }
+            ],
+            "UpstreamPathTemplate": "/ProductService/{url}",
+            "UpstreamHttpMethod": [ "Get", "Post" ]
+        },
+        // API:AgentService
+        {
+            "DownstreamPathTemplate": "/api/{url}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost", //"192.168.2.231",
+                    "Port": "8830"
+                }
+            ],
+            "UpstreamPathTemplate": "/AgentService/{url}",
+            "UpstreamHttpMethod": [ "Get", "Post" ]
+        }
+    ]
+}
